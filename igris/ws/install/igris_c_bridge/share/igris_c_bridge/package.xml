@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>igris_c_bridge</name>
+  <version>0.1.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="kimjisuk145@gmail.com">robros</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nlohmann_json</build_depend>
+  <build_depend>igris_c_can</build_depend>
+  <build_depend>igris_c_imu</build_depend>
+  <build_depend>igris_c_lib</build_depend>
+  <build_depend>igris_c_sdk</build_depend>
+  <build_depend>igris_c_shm</build_depend>
+  <build_depend>igris_c_mujoco</build_depend>
+  <build_depend>nlohmann_json_schema_validator</build_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nlohmann_json</exec_depend>
+  <exec_depend>igris_c_can</exec_depend>
+  <exec_depend>igris_c_shm</exec_depend>
+  <exec_depend>igris_c_sdk</exec_depend>
+
+  <!-- Export dependencies -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

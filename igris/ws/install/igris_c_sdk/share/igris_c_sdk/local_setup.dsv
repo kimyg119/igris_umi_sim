@@ -1,0 +1,4 @@
+source;share/igris_c_sdk/environment/ament_prefix_path.sh
+source;share/igris_c_sdk/environment/library_path.sh
+source;share/igris_c_sdk/environment/path.sh
+source;share/igris_c_sdk/environment/pythonpath.sh

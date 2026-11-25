@@ -1,0 +1,18 @@
+<package format="3">
+  <name>igris_c_joystick</name>
+  <version>0.0.0</version>
+  <description>Joystick teleop: reads an evdev gamepad and publishes WalkTwist on rt/cmd_vel over CycloneDDS (left stick = linear, right stick = angular).</description>
+  <maintainer email="robros@todo.todo">robros</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>igris_c_sdk</depend>
+  <depend>igris_c_shm</depend>
+  <depend>eigen</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

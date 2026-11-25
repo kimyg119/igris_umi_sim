@@ -1,0 +1,11 @@
+<!-- 로컬 시뮬 전용. NUC 원본은 NetworkInterface name="eno1" 로 고정돼 있는데
+     이 PC에는 eno1이 없어서 DDS가 뜨지 않는다. 컨테이너 안 NIC를 자동으로 잡게 한다. -->
+<CycloneDDS>
+    <Domain id="any">
+        <General>
+            <Interfaces>
+                <NetworkInterface autodetermine="true" />
+            </Interfaces>
+        </General>
+    </Domain>
+</CycloneDDS>

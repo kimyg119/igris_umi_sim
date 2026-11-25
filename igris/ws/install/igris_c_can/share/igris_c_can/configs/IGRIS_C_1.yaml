@@ -1,0 +1,268 @@
+version: 2
+description: This file contains the configuration for the IGRIS C bionic robot, including motor settings and their respective parameters.
+settings:
+  name: IGRIS_C_channel_1
+
+motors:
+
+- name: 20_Wrist_Yaw_Left
+  id: 20
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P8_8 # X6_P8_V3
+  motor_class_options: [RMD_X6_P8_8, X6_P8_V3]
+  can_channel: 1
+  protocol: v4 # v3
+  protocol_options: [v4, v3]
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 0.8  # 1.36 (default) and for X6_P8_V3
+  max_torque: 8.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.010000 # 0.5 for X6_P8_V3
+  position_ki: 0.000000 # 0.005 for X6_P8_V3
+  position_kd: 0.500000 # 0 for X6_P8_V3
+  speed_kp: 0.005000    # 0.1 for X6_P8_V3
+  speed_ki: 0.000200    # 0.005 for X6_P8_V3
+  speed_kd: -1.0
+  current_kp: 1.800000  # 0.5 for X6_P8_V3
+  current_ki: 0.100000  # 0.1 for X6_P8_V3
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 21_Wrist_Front_Left
+  id: 21
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P8_8 # X6_P8_V3
+  motor_class_options: [RMD_X6_P8_8, X6_P8_V3]
+  can_channel: 1
+  protocol: v4 # v3
+  protocol_options: [v4, v3]
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 0.8  # 1.36 (default) and for X6_P8_V3
+  max_torque: 8.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.010000 # 0.5 for X6_P8_V3
+  position_ki: 0.000000 # 0.005 for X6_P8_V3
+  position_kd: 0.500000 # 0 for X6_P8_V3
+  speed_kp: 0.005000    # 0.1 for X6_P8_V3
+  speed_ki: 0.000200    # 0.005 for X6_P8_V3
+  speed_kd: -1.0
+  current_kp: 1.800000  # 0.5 for X6_P8_V3
+  current_ki: 0.100000  # 0.1 for X6_P8_V3
+  current_kd: -1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+- name: 22_Wrist_Back_Left
+  id: 22
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P8_8 # X6_P8_V3
+  motor_class_options: [RMD_X6_P8_8, X6_P8_V3]
+  can_channel: 1
+  protocol: v4 # v3
+  protocol_options: [v4, v3]
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 0.8  # 1.36 (default) and for X6_P8_V3
+  max_torque: 8.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.010000 # 0.5 for X6_P8_V3
+  position_ki: 0.000000 # 0.005 for X6_P8_V3
+  position_kd: 0.500000 # 0 for X6_P8_V3
+  speed_kp: 0.005000    # 0.1 for X6_P8_V3
+  speed_ki: 0.000200    # 0.005 for X6_P8_V3
+  speed_kd: -1.0
+  current_kp: 1.800000  # 0.5 for X6_P8_V3
+  current_ki: 0.100000  # 0.1 for X6_P8_V3
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 30_Neck_Yaw
+  id: 30
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X2_P28_7
+  can_channel: 1
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 0.6167
+  max_torque: 7.0
+  over_voltage: 30.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.050000
+  position_ki: 0.000000
+  position_kd: 0.001000
+  speed_kp: 0.005000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.800000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+- name: 16_Shoulder_Pitch_Left
+  id: 16
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 1
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 17_Shoulder_Roll_Left
+  id: 17
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 1
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 18_Shoulder_Yaw_Left
+  id: 18
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 1
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 19_Elbow_Pitch_Left
+  id: 19
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 1
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0

@@ -1,0 +1,49 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="igris_c_neck" params="parent">
+
+
+    <link name="Neck_Yaw_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Neck_Pitch_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="30_Neck_Yaw" type="revolute">
+        <parent link="base_link"/>
+        <child link="Neck_Yaw_Link"/>
+        <origin xyz="5 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.2211" upper="1.2211" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="31_Neck_Pitch" type="revolute">
+        <parent link="base_link"/>
+        <child link="Neck_Pitch_Link"/>
+        <origin xyz="6 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-0.5233" upper="0.5233" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    </xacro:macro>
+</robot>

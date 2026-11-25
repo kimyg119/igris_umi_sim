@@ -1,0 +1,154 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="igris_c_left_arm" params="parent">
+        <link name="Shoulder_Pitch_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Shoulder_Roll_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Shoulder_Yaw_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Elbow_Pitch_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Wrist_Yaw_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Wrist_Front_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Wrist_Back_Left_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+
+        <joint name="16_Shoulder_Pitch_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Shoulder_Pitch_Left_Link"/>
+            <origin xyz="3 4 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-3.1415" upper="1.0467" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="17_Shoulder_Roll_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Shoulder_Roll_Left_Link"/>
+            <origin xyz="3 5 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.1744" upper="3.1415" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="18_Shoulder_Yaw_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Shoulder_Yaw_Left_Link"/>
+            <origin xyz="3 6 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="19_Elbow_Pitch_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Elbow_Pitch_Left_Link"/>
+            <origin xyz="4 1 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-2.093" upper="0.087" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="20_Wrist_Yaw_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Wrist_Yaw_Left_Link"/>
+            <origin xyz="4 2 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="21_Wrist_Front_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Wrist_Front_Left_Link"/>
+            <origin xyz="4 3 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.7571" upper="0.9821" effort="0.0" velocity="0.0"/>
+        </joint>
+        
+        <joint name="22_Wrist_Back_Left" type="revolute">
+            <parent link="base_link"/>
+            <child link="Wrist_Back_Left_Link"/>
+            <origin xyz="4 4 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.9821" upper="0.7571" effort="0.0" velocity="0.0"/>
+        </joint>
+
+    </xacro:macro>
+
+</robot>

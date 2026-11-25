@@ -1,0 +1,668 @@
+<?xml version="1.0"?>
+<robot name="IGRIS_C_MOTORS">
+
+    <!-- base link -->
+    <link name="base_link">
+        <visual>
+            <origin xyz="5 5 0.0"/>
+            <geometry>
+                <box size="10 10 0.01"/>
+            </geometry>
+
+            <material>
+                <color rgba="0.1 0.7 0.2 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- waist -->
+    <link name="Waist_Yaw_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Waist_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Waist_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- left leg -->
+    <link name="Hip_Pitch_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Hip_Roll_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Hip_Yaw_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Knee_Pitch_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Ankle_Out_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Ankle_In_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- right leg -->
+    <link name="Hip_Pitch_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Hip_Roll_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Hip_Yaw_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Knee_Pitch_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Ankle_Out_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Ankle_In_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- left arm -->
+    <link name="Shoulder_Pitch_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Shoulder_Roll_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Shoulder_Yaw_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Elbow_Pitch_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Yaw_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Front_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Back_Left_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- right arm -->
+    <link name="Shoulder_Pitch_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Shoulder_Roll_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Shoulder_Yaw_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Elbow_Pitch_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Yaw_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Front_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Wrist_Back_Right_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <!-- neck -->
+    <link name="Neck_Yaw_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+    <link name="Neck_Pitch_Link">
+        <visual>
+            <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+            <geometry>
+                <cylinder radius="0.02" length="0.5"/>
+            </geometry>
+
+            <material name="random">
+                <color rgba="0.7 0.7 0.7 0.7"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="1_Waist_Yaw" type="revolute">
+        <parent link="base_link"/>
+        <child link="Waist_Yaw_Link"/>
+
+        <origin xyz="1 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="2_Waist_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Waist_Left_Link"/>
+        <origin xyz="1 2 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="3_Waist_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Waist_Right_Link"/>
+        <origin xyz="1 3 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="4_Hip_Pitch_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Pitch_Left_Link"/>
+        <origin xyz="1 4 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="5_Hip_Roll_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Roll_Left_Link"/>
+        <origin xyz="1 5 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="6_Hip_Yaw_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Yaw_Left_Link"/>
+        <origin xyz="1 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="7_Knee_Pitch_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Knee_Pitch_Left_Link"/>
+        <origin xyz="2 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="8_Ankle_Out_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Ankle_Out_Left_Link"/>
+        <origin xyz="2 2 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="9_Ankle_In_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Ankle_In_Left_Link"/>
+        <origin xyz="2 3 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="10_Hip_Pitch_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Pitch_Right_Link"/>
+        <origin xyz="2 4 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="11_Hip_Roll_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Roll_Right_Link"/>
+        <origin xyz="2 5 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="12_Hip_Yaw_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Hip_Yaw_Right_Link"/>
+        <origin xyz="2 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="13_Knee_Pitch_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Knee_Pitch_Right_Link"/>
+        <origin xyz="3 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="14_Ankle_Out_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Ankle_Out_Right_Link"/>
+        <origin xyz="3 2 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="15_Ankle_In_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Ankle_In_Right_Link"/>
+        <origin xyz="3 3 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="16_Shoulder_Pitch_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Pitch_Left_Link"/>
+        <origin xyz="3 4 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="17_Shoulder_Roll_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Roll_Left_Link"/>
+        <origin xyz="3 5 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="18_Shoulder_Yaw_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Yaw_Left_Link"/>
+        <origin xyz="3 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="19_Elbow_Pitch_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Elbow_Pitch_Left_Link"/>
+        <origin xyz="4 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="20_Wrist_Yaw_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Yaw_Left_Link"/>
+        <origin xyz="4 2 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="21_Wrist_Front_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Front_Left_Link"/>
+        <origin xyz="4 3 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="22_Wrist_Back_Left" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Back_Left_Link"/>
+        <origin xyz="4 4 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="23_Shoulder_Pitch_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Pitch_Right_Link"/>
+        <origin xyz="4 5 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="24_Shoulder_Roll_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Roll_Right_Link"/>
+        <origin xyz="4 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="25_Shoulder_Yaw_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Shoulder_Yaw_Right_Link"/>
+        <origin xyz="5 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="26_Elbow_Pitch_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Elbow_Pitch_Right_Link"/>
+        <origin xyz="5 2 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <joint name="27_Wrist_Yaw_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Yaw_Right_Link"/>
+        <origin xyz="5 3 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="28_Wrist_Front_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Front_Right_Link"/>
+        <origin xyz="5 4 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="29_Wrist_Back_Right" type="revolute">
+        <parent link="base_link"/>
+        <child link="Wrist_Back_Right_Link"/>
+        <origin xyz="5 5 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="30_Neck_Yaw" type="revolute">
+        <parent link="base_link"/>
+        <child link="Neck_Yaw_Link"/>
+        <origin xyz="5 6 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+    <joint name="31_Neck_Pitch" type="revolute">
+        <parent link="base_link"/>
+        <child link="Neck_Pitch_Link"/>
+        <origin xyz="6 1 1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+    </joint>
+
+</robot>

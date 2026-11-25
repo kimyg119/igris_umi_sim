@@ -1,0 +1,45 @@
+{
+  "csv_path": "data/wrist_L_20251231_164548.csv",
+  "selected_pair": {
+    "x": "roll",
+    "y": "pitch",
+    "pair_index": 0
+  },
+  "vertices": [
+    [
+      -1.4829,
+      0.0
+    ],
+    [
+      -1.0109,
+      -0.5915
+    ],
+    [
+      0.6529,
+      -0.5817
+    ],
+    [
+      0.96,
+      0.0
+    ],
+    [
+      0.6414,
+      0.6
+    ],
+    [
+      -0.9816,
+      0.64
+    ]
+  ],
+  "polygon_area_signed": 2.467155115,
+  "polygon_area_abs": 2.467155115,
+  "margin_ratio_0_1": 0.0,
+  "margin_reference": "d_max (max interior distance to boundary, grid-estimated)",
+  "d_max_estimate": 0.6096207481081131,
+  "margin_dist": 0.0,
+  "margined_vertices_same_count": null,
+  "margined_area_abs_same_count": 0.0,
+  "margined_area_grid_estimate": 0.0,
+  "margined_area_note": "same_count inset is robust-approx; grid area is an independent estimate.",
+  "policy": "strict interior; inside_margined = inside_original AND dist_to_boundary > margin_dist"
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Bridge command registry. Defines all valid commands, their functionType, and timeout.",
+  "commands": {
+    "MOTION_PRESET": {
+      "functionType": "control",
+      "timeout_sec": 60
+    },
+    "MOTION_PRESET_CYCLIC_TOGGLE": {
+      "functionType": "control",
+      "timeout_sec": 60
+    },
+    "JOINT_POSITION_HOLD": {
+      "functionType": "control"
+    },
+    "MOTION_STOP": {
+      "functionType": "control"
+    },
+    "JOYSTICK_CONTROL": {
+      "functionType": "control"
+    },
+    "WALKMODE_ON": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "LOW_LEVEL_JOINT_CONTROL": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "HIGH_LEVEL_JOINT_CONTROL": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "LOW_LEVEL_WALKMODE_ON": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_1": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_2": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_3": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_4": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_5": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_6": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_7": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_8": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_9": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "CUSTOM_MODE_10": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "HIGH_LEVEL_WALKMODE_ON": {
+      "functionType": "control",
+      "timeout_sec": 5
+    },
+    "GET_CURRENT_STATE": {
+      "functionType": "monitoring"
+    },
+    "PING": {
+      "functionType": "monitoring"
+    },
+    "GET_JOINTS_AND_MOTORS_DATA": {
+      "functionType": "monitoring"
+    },
+    "GET_ROBOT_STATUS": {
+      "functionType": "monitoring"
+    },
+    "GET_MOTION_LIST": {
+      "functionType": "monitoring"
+    },
+    "GET_NETWORK_INFO": {
+      "functionType": "monitoring"
+    },
+    "TORQUE_ON": {
+      "functionType": "setting"
+    },
+    "TORQUE_OFF": {
+      "functionType": "setting"
+    },
+    "MOTOR_ON": {
+      "functionType": "setting"
+    },
+    "MOTOR_OFF": {
+      "functionType": "setting"
+    },
+    "HAND_INIT": {
+      "functionType": "setting"
+    }
+  }
+}

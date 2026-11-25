@@ -1,0 +1,8 @@
+source;share/igris_c_joystick/hook/cmake_prefix_path.ps1
+source;share/igris_c_joystick/hook/cmake_prefix_path.dsv
+source;share/igris_c_joystick/hook/cmake_prefix_path.sh
+source;share/igris_c_joystick/local_setup.bash
+source;share/igris_c_joystick/local_setup.dsv
+source;share/igris_c_joystick/local_setup.ps1
+source;share/igris_c_joystick/local_setup.sh
+source;share/igris_c_joystick/local_setup.zsh

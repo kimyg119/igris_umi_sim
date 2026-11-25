@@ -1,0 +1,129 @@
+currentKP:
+  index: 4
+  value: 0.8
+currentKI:
+  index: 5
+  value: 0.08
+speedKP:
+  index: 6
+  value: 0.03
+speedKI:
+  index: 7
+  value: 0.0001
+positionKP:
+  index: 8
+  value: 0.008
+positionKI:
+  index: 9
+  value: 0
+positionKD:
+  index: 10
+  value: 0.1
+overVoltage:
+  index: 19
+  value: 59
+lowVoltage:
+  index: 20
+  value: 20
+stallTime:
+  index: 21
+  value: 3
+eBrakeStartDucyCycle:
+  index: 22
+  value: 50
+currentSampleRate:
+  index: 23
+  value: 2
+eBrakeHoldDucyCycle:
+  index: 24
+  value: 30
+eBrakeMode:
+  index: 25
+  value: 0
+maxPositivePosition:
+  index: 26
+  value: 65535
+minNegativePosition:
+  index: 27
+  value: 65535
+positivePlanMaxAcc:
+  index: 28
+  value: 5000
+positivePlanMaxDec:
+  index: 29
+  value: 5000
+positivePlanMaxSpeed:
+  index: 30
+  value: 996
+speedPlanMaxAcc:
+  index: 31
+  value: 5000
+speedPlanMaxDec:
+  index: 32
+  value: 5000
+# motorPositionZero:
+#   index: 33
+#   value: 0
+ratedCurrent:
+  index: 34
+  value: 24.88
+maxCurrent:
+  index: 35
+  value: 64
+stallCurrent:
+  index: 36
+  value: 61.9
+shutdownTemp:
+  index: 37
+  value: 100
+resumeTemp:
+  index: 38
+  value: 90
+maxSpeed:
+  index: 39
+  value: 3500
+nominalSpeed:
+  index: 40
+  value: 2490
+enable2ndEncoder:
+  index: 41
+  value: 3
+currentKD:
+  index: 44
+  value: 0
+speedKD:
+  index: 45
+  value: 0
+currentLoopRamp:
+  index: 46
+  value: 0
+currentFilterConst:
+  index: 47
+  value: 0.0001
+speedFilterConst:
+  index: 48
+  value: 0.005
+positionFilterConst:
+  index: 49
+  value: 0.0001
+enableEhterCAT:
+  index: 59
+  value: 0
+thermistor:
+  index: 61
+  value: 1
+kt_out:
+  index: 62
+  value: 2.1528 # 2.0 (default) 
+encoder2AbnormalValue:
+  index: 63
+  value: 100
+encoder2AbnormalSpeed:
+  index: 64
+  value: 5
+automaticErrorRecovery:
+  index: 65
+  value: 1
+maxTorque:
+  index: 70
+  value: 120

@@ -1,0 +1,53 @@
+{
+  "robot_floor_origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "robot_pelvis_height_m": 0.890000003181398,
+  "robot_forward_axis": "+X",
+  "face_distance_m": 0.2,
+  "contact_point_xy_m": [
+    0.28284271247461906,
+    0.0
+  ],
+  "front_faces_angle_deg": 90.0,
+  "supports": {
+    "pallet": {
+      "yaw_deg": -135.0,
+      "size_m": [
+        1.1,
+        1.1
+      ],
+      "touch_corner_local_m": [
+        -0.55,
+        -0.55
+      ],
+      "position_m": [
+        0.2828427124746191,
+        -0.7778174593052023,
+        0.0
+      ]
+    },
+    "rolltainer": {
+      "yaw_deg": -45.0,
+      "size_m": [
+        0.92,
+        0.7
+      ],
+      "touch_corner_local_m": [
+        0.46,
+        -0.35
+      ],
+      "position_m": [
+        0.20506096654409875,
+        0.5727564927611035,
+        0.0
+      ]
+    }
+  },
+  "box_count": 38,
+  "rolltainer_fixed": true,
+  "source_layout": "layout.json",
+  "distance_definition": "horizontal perpendicular distance from floor origin to finite robot-facing support edge"
+}

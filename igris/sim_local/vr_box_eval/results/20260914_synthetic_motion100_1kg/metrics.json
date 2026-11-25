@@ -1,0 +1,103 @@
+{
+  "waist_strategy": "separated",
+  "mode": "off",
+  "mass_kg": 1.0,
+  "actual_frames": 2456,
+  "recorded_duration_s": 82.65079998970032,
+  "pickup_achieved": true,
+  "stable_carry": true,
+  "bilateral_contact_fraction": 1.0,
+  "unsupported_lift_fraction": 1.0,
+  "stable_carry_fraction": 1.0,
+  "box_min_z_carry_m": 0.8573149480366246,
+  "box_max_z_m": 0.8637072604892861,
+  "min_base_z_m": 0.8660768676612096,
+  "fallen": false,
+  "torso_relative_yaw_rmse_deg": 0.6681354982415034,
+  "torso_relative_yaw_span_deg": 90.70336023297885,
+  "physical_self_contact_fraction": 0.0,
+  "max_self_penetration_m": -0.0,
+  "arm_velocity_p95_rad_s": 0.08276504260936506,
+  "arm_jerk_p95_rad_s3": 13.287173793450556,
+  "left_force_max_N": 8.253305264093328,
+  "right_force_max_N": 8.778630052778936,
+  "box_final_position_m": [
+    0.2586988592599258,
+    0.24641702639142918,
+    0.7997653108474908
+  ],
+  "box_tilt_max_carry_deg": 3.0064777943398933,
+  "box_tilt_final_deg": 0.07434440459018918,
+  "rotation_criteria_deg": {
+    "carry": 10.0,
+    "landing": 5.0
+  },
+  "physics_realtime_ratio": 0.8904128445114231,
+  "initial_box_support_force_mean_N": 9.809999999999999,
+  "base_tilt_max_deg": 3.603230638455838,
+  "balance_lost": false,
+  "initial_robot_support_force_max_N": 0.0,
+  "robot_support_force_max_N": 0.0,
+  "robot_support_contact_fraction": 0.0,
+  "physics_elapsed_s": 73.59333391997376,
+  "max_record_gap_s": 0.03517723083496094,
+  "torso_world_yaw_span_deg": 90.04946510086612,
+  "torso_world_yaw_rmse_deg": 0.9761288815338383,
+  "base_xy_max_displacement_m": 0.03810533117707633,
+  "arm_moving_fraction": 0.9002442996742671,
+  "released_contact_free": true,
+  "released_on_target": true,
+  "task_success": false,
+  "palm_and_tip_contact_fraction_carry": 0.19646365422396855,
+  "palm_support_fraction_carry": 0.6345776031434185,
+  "palm_tip_force_max_N": [
+    7.9482063253071065,
+    0.5950087223841241,
+    8.702877589778439,
+    0.9529311264193783
+  ],
+  "other_hand_contact_force_max_N": [
+    0.0,
+    0.0
+  ],
+  "palm_preload_force_N": 6.1312500000000005,
+  "palm_preload_target_fraction_carry": 0.6345776031434185,
+  "selected_surface_support_fraction_carry": 0.14341846758349705,
+  "broad_pad_force_max_N": [
+    0.0,
+    0.0
+  ],
+  "mcp_compliance": {
+    "error": null,
+    "sides": [
+      {
+        "angle_min_deg": 29.54881603045253,
+        "angle_max_deg": 30.13718528295575,
+        "modeled_current_max_A": 0.001,
+        "motor_torque_max_Nm": 0.03883056051391445
+      },
+      {
+        "angle_min_deg": 29.38592957336989,
+        "angle_max_deg": 30.106757955709035,
+        "modeled_current_max_A": 0.002,
+        "motor_torque_max_Nm": 0.0513968409501328
+      }
+    ]
+  },
+  "dip_passive": {
+    "min_deg": [
+      -4.617522348570179,
+      -3.655907518528292
+    ],
+    "max_deg": [
+      17.42474227624941,
+      25.03122156565722
+    ],
+    "median_contact_deg": [
+      11.593329612729093,
+      10.232890145775437
+    ],
+    "loaded_target_deg": 27.0,
+    "no_dip_actuator": true
+  }
+}

@@ -1,0 +1,11 @@
+# Python packages installed with tools/install_packages.sh
+/vendor_py/
+# run outputs, datasets, checkpoints
+/outputs/
+/datasets/
+/checkpoints/
+# server settings with the real address and account
+/server/env.local.sh
+__pycache__/
+*.pyc
+.pytest_cache/

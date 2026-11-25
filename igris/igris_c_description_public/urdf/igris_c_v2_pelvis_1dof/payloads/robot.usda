@@ -1,0 +1,512 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "igris_c_v2"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpw9xl_4wn/igris_c_v2.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_igris_c_v2_pelvis_1dof_xscd0clb/usdex_igris_c_v2_pelvis_1dof/igris_c_v2.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_igris_c_v2_pelvis_1dof_xscd0clb/temp_igris_c_v2_pelvis_1dof/igris_c_v2_pelvis_1dof.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "igris_c_v2" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </igris_c_v2/Physics/base_joint>,
+        </igris_c_v2/Physics/waist_pitch>,
+        </igris_c_v2/Physics/l_hip_pitch>,
+        </igris_c_v2/Physics/r_hip_pitch>,
+        </igris_c_v2/Physics/waist_roll>,
+        </igris_c_v2/Physics/waist_yaw>,
+        </igris_c_v2/Physics/l_shoulder_pitch>,
+        </igris_c_v2/Physics/r_shoulder_pitch>,
+        </igris_c_v2/Physics/neck_yaw>,
+        </igris_c_v2/Physics/l_shoulder_roll>,
+        </igris_c_v2/Physics/l_shoulder_yaw>,
+        </igris_c_v2/Physics/l_elbow_pitch>,
+        </igris_c_v2/Physics/l_wrist_yaw>,
+        </igris_c_v2/Physics/l_wrist_roll>,
+        </igris_c_v2/Physics/l_wrist_pitch>,
+        </igris_c_v2/Physics/l_1_dof_gripper_fixed>,
+        </igris_c_v2/Physics/l_1_dof_gripper_moving>,
+        </igris_c_v2/Physics/r_shoulder_roll>,
+        </igris_c_v2/Physics/r_shoulder_yaw>,
+        </igris_c_v2/Physics/r_elbow_pitch>,
+        </igris_c_v2/Physics/r_wrist_yaw>,
+        </igris_c_v2/Physics/r_wrist_roll>,
+        </igris_c_v2/Physics/r_wrist_pitch>,
+        </igris_c_v2/Physics/r_1_dof_gripper_fixed>,
+        </igris_c_v2/Physics/r_1_dof_gripper_moving>,
+        </igris_c_v2/Physics/neck_pitch>,
+        </igris_c_v2/Physics/l_hip_roll>,
+        </igris_c_v2/Physics/l_hip_yaw>,
+        </igris_c_v2/Physics/l_knee_pitch>,
+        </igris_c_v2/Physics/l_ankle_pitch>,
+        </igris_c_v2/Physics/l_ankle_roll>,
+        </igris_c_v2/Physics/r_hip_roll>,
+        </igris_c_v2/Physics/r_hip_yaw>,
+        </igris_c_v2/Physics/r_knee_pitch>,
+        </igris_c_v2/Physics/r_ankle_pitch>,
+        </igris_c_v2/Physics/r_ankle_roll>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </igris_c_v2/Geometry/base_link/pelvis>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket/l_forearm>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket/l_forearm/l_wrist_rod>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket/l_forearm/l_wrist_rod/l_wrist_connector>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket/l_forearm/l_wrist_rod/l_wrist_connector/l_1_dof_gripper_fixed>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/l_shoulder_frame/l_shoulder_bracket/l_upper_arm/l_elbow_bracket/l_forearm/l_wrist_rod/l_wrist_connector/l_1_dof_gripper_fixed/l_1_dof_gripper_moving>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket/r_forearm>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket/r_forearm/r_wrist_rod>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket/r_forearm/r_wrist_rod/r_wrist_connector>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket/r_forearm/r_wrist_rod/r_wrist_connector/r_1_dof_gripper_fixed>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/r_shoulder_frame/r_shoulder_bracket/r_upper_arm/r_elbow_bracket/r_forearm/r_wrist_rod/r_wrist_connector/r_1_dof_gripper_fixed/r_1_dof_gripper_moving>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/neck>,
+        </igris_c_v2/Geometry/base_link/pelvis/waist_follower/waist_frame/torso/neck/head>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame/l_hip_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame/l_hip_bracket/l_upper_leg>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame/l_hip_bracket/l_upper_leg/l_lower_leg>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame/l_hip_bracket/l_upper_leg/l_lower_leg/l_ankle_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/l_hip_frame/l_hip_bracket/l_upper_leg/l_lower_leg/l_ankle_frame/l_foot_original>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame/r_hip_bracket>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame/r_hip_bracket/r_upper_leg>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame/r_hip_bracket/r_upper_leg/r_lower_leg>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame/r_hip_bracket/r_upper_leg/r_lower_leg/r_ankle_frame>,
+        </igris_c_v2/Geometry/base_link/pelvis/r_hip_frame/r_hip_bracket/r_upper_leg/r_lower_leg/r_ankle_frame/r_foot_original>,
+    ]
+    token isaac:robotType = "Default"
+
+    over "Geometry"
+    {
+        over "base_link"
+        {
+            over "pelvis" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "waist_follower" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "waist_frame" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "torso" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "l_shoulder_frame" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "l_shoulder_bracket" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "l_upper_arm" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                        over "l_elbow_bracket" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                            over "l_forearm" (
+                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                            )
+                                            {
+                                                over "l_wrist_rod" (
+                                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                                )
+                                                {
+                                                    over "l_wrist_connector" (
+                                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                                    )
+                                                    {
+                                                        over "l_1_dof_gripper_fixed" (
+                                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                                        )
+                                                        {
+                                                            over "l_1_dof_gripper_moving" (
+                                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                                            )
+                                                            {
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "r_shoulder_frame" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "r_shoulder_bracket" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "r_upper_arm" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                        over "r_elbow_bracket" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                            over "r_forearm" (
+                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                            )
+                                            {
+                                                over "r_wrist_rod" (
+                                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                                )
+                                                {
+                                                    over "r_wrist_connector" (
+                                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                                    )
+                                                    {
+                                                        over "r_1_dof_gripper_fixed" (
+                                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                                        )
+                                                        {
+                                                            over "r_1_dof_gripper_moving" (
+                                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                                            )
+                                                            {
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "neck" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "head" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "l_hip_frame" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "l_hip_bracket" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "l_upper_leg" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "l_lower_leg" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "l_ankle_frame" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "l_foot_original" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "r_hip_frame" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "r_hip_bracket" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "r_upper_leg" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "r_lower_leg" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "r_ankle_frame" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    over "r_foot_original" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "base_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "waist_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "waist_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "waist_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_hip_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_hip_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_hip_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_knee_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_ankle_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_ankle_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_hip_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_hip_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_hip_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_knee_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_ankle_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_ankle_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_shoulder_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_shoulder_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_shoulder_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_elbow_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_wrist_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_wrist_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_wrist_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_1_dof_gripper_fixed" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "l_1_dof_gripper_moving" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_shoulder_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_shoulder_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_shoulder_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_elbow_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_wrist_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_wrist_roll" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_wrist_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_1_dof_gripper_fixed" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "r_1_dof_gripper_moving" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "neck_yaw" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "neck_pitch" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

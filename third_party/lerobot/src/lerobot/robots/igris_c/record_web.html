@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IGRIS · Record Studio</title>
+<style>
+:root{color-scheme:dark;--bg:#10131b;--card:#191e29;--line:#303849;--text:#eef2f8;--muted:#aab5c7;--blue:#77b7ff;--green:#73e1b0;--red:#ff9898}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}
+header,.layout{max-width:1540px;margin:auto;padding:28px}header{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{color:var(--blue);font-size:12px;letter-spacing:.17em}h1{font-size:30px;margin:6px 0}h2{font-size:17px;margin:0 0 16px}p{margin:8px 0}
+.sub,label,dt{color:var(--muted);font-size:13px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:20px;padding-top:0}.stack{display:flex;flex-direction:column;gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+label{display:block;margin:15px 0 6px}input,textarea{width:100%;font:inherit;color:var(--text);background:#111722;border:1px solid #46536a;border-radius:8px;padding:10px}textarea{resize:vertical;min-height:110px}
+button{font:600 14px system-ui;color:var(--text);background:#273349;border:1px solid #4e6280;border-radius:9px;padding:12px 16px;cursor:pointer}button:hover:enabled{filter:brightness(1.18)}button:disabled{opacity:.38;cursor:not-allowed}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.primary{color:#091624;background:var(--blue);border-color:var(--blue);width:100%;margin-top:20px}.danger{color:var(--red);border-color:#885252}.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.badge{font-size:12px;border:1px solid var(--line);border-radius:20px;padding:5px 11px;color:var(--green)}.stale{color:#e3bb75}.phase{font-size:21px;font-weight:650}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.metric{background:#121722;border-radius:10px;padding:15px}.metric strong{display:block;font-size:24px}.metric span{font-size:12px;color:var(--muted)}dl{margin:12px 0 0}dd{margin:3px 0 14px;overflow-wrap:anywhere;font-size:13px}.error{color:var(--red);white-space:pre-wrap;overflow-wrap:anywhere}.note{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}progress{width:100%;height:7px;accent-color:var(--blue);margin-top:18px}
+#pose-panel{grid-column:1/-1}.pose-row{display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;padding:4px;margin:14px -4px}.pose-step{flex:1 0 150px;min-height:62px;white-space:nowrap;background:#17344e;border-color:#497ba4}.tow-status{color:var(--green)}main{min-width:0}
+@media(max-width:850px){header,.layout{padding:18px}.layout{grid-template-columns:1fr}header{align-items:flex-start}.metrics{gap:6px}.metric{padding:12px}}
+</style></head><body>
+<header><div><div class="brand">IGRIS / LEROBOT</div><h1>Record Studio</h1><p class="sub">로봇 데이터 취득 · 자동 이동 + TOW 조작</p></div><span id="connection" class="badge stale" role="status">연결 중</span></header>
+<div class="layout">
+<section class="card" id="pose-panel">
+ <div class="top"><h2 style="margin:0">박스 이동</h2><span class="sub" id="pose-mode">버튼을 누르면 실제 로봇이 이동합니다</span></div>
+ <div class="pose-row" id="pose-steps" role="group" aria-label="실제 로봇 자세 이동"></div>
+ <div class="top"><span id="tow-state" class="tow-status" role="status">Viser LowCmd/TOW3를 한 번 연결하세요</span><button data-action="pose_stop" class="danger" disabled>동작만 중단</button></div>
+ <p class="sub">처음에는 ③으로 Home 준비 · ① 이후 자동 TOW → 접근·파지 · ② 이후 자동 TOW → 내려놓기·파지 해제 · 손을 뺀 뒤 ③</p>
+ <p id="record-phase" class="sub" role="status">기록 단계 대기</p>
+ <p class="sub note">①/②: 이동 완료 0.2초 이후 연결 준비·최신 입력 확인 시 자동 TOW 추종. ③은 C로 시작합니다. 자동 추종 중 C로 일시정지할 수 있고, 모든 동작은 같은 에피소드에 기록됩니다.</p>
+</section>
+<aside class="stack">
+ <section class="card"><h2>새 취득 세션</h2><form id="settings"><label for="name">로컬 취득 세션 이름</label><input id="name" required maxlength="72" pattern="[A-Za-z0-9][A-Za-z0-9_-]{0,71}" autocomplete="off"><p class="sub">영문·숫자·_·- 사용. 실행 시각이 자동으로 붙습니다.</p><label for="count">취득할 에피소드 수</label><input id="count" type="number" min="1" max="10000" step="1" required><label for="instruction">Language instruction</label><textarea id="instruction" required maxlength="2000"></textarea><button class="primary" id="start" type="submit" data-action="start" disabled>취득 시작</button></form><p class="sub note">로컬 저장을 마치면 아래 Hub 대상에 자동 커밋합니다. 세션 이름은 로컬 저장에 사용하며, 각 에피소드에 입력한 instruction이 적용됩니다.</p></section>
+</aside>
+<main class="stack">
+ <section class="card"><div class="top"><span class="phase" id="phase" role="status">서버 연결 중</span><span class="badge" id="pose-state">동작 대기</span></div><p class="sub" id="hint">설정을 입력한 다음 취득 시작을 누르세요.</p><div class="buttons"><button data-action="init_pose" disabled>Init Pose</button><button data-action="next" id="next" disabled>Next · 저장</button><button data-action="reset" disabled>Reset · 현재 에피소드 폐기</button><button data-action="stop" id="stop" class="danger" disabled>취득 종료 · 현재 분량 저장</button></div><p class="error" id="error" role="alert"></p><div class="metrics"><div class="metric"><strong id="episodes">0 / 0</strong><span>저장된 에피소드</span></div><div class="metric"><strong id="frames">0</strong><span>현재 에피소드 프레임</span></div><div class="metric"><strong id="seconds">0.0 s</strong><span>데이터 시간</span></div></div><progress id="progress" value="0" max="1" aria-label="에피소드 취득 진행률"></progress><p class="sub note">Next: 현재 에피소드 저장 → 준비 대기 → 다시 누르면 다음 취득. Reset: 현재 미저장 분량 폐기 → 준비 대기. 기존 Init Pose는 준비 상태에서 사용할 수 있고, 위 3개 동작은 취득 중에도 사용할 수 있습니다.</p></section>
+ <section class="card"><h2>저장 정보</h2><dl><dt>로컬 세션</dt><dd id="repo">—</dd><dt>Hub 대상</dt><dd id="hub-repo">—</dd><dt>로컬 저장 경로</dt><dd id="output">—</dd><dt>Hub 저장</dt><dd><span id="upload-state" role="status">대기</span> <a id="hub-link" target="_blank" rel="noopener noreferrer" style="color:var(--blue)" hidden>데이터셋 열기</a> <button data-action="retry_upload" id="retry-upload" hidden disabled>Hub 커밋 재시도</button></dd><dt>완료 커밋</dt><dd id="hub-revision">—</dd><dt>누적 데이터</dt><dd id="hub-totals">—</dd><dt>설정</dt><dd id="config">—</dd><dt>Init Pose 목표</dt><dd id="pose">—</dd><dt>최근 동작 송신</dt><dd id="writes">실행 없음</dd></dl></section>
+ <p class="sub">준비 중에는 기록하지 않습니다. 탭을 닫아도 취득은 계속됩니다. 중단·오류 때는 자동 재연결하지 않습니다. 종료 버튼은 비상정지나 Torque OFF가 아닙니다.</p>
+</main></div>
+<script>
+const token='__TOKEN__', $=id=>document.getElementById(id);
+let loaded=false,pending=false,latest=null,commandError='';
+const phases={idle:'취득 대기',connecting:'센서 연결 중',recording:'취득 중',ending_episode:'요청 처리 중',saving:'에피소드 저장 중',discarding:'현재 에피소드 폐기 중',ready:'다음 에피소드 준비',finalizing:'데이터셋 마무리 중',uploading:'Hub 저장 중',complete:'취득 완료',error:'오류'};
+const uploads={idle:'대기',pending:'취득 완료 후 자동 커밋',uploading:'Hub 저장 중 · 로컬 저장 완료',complete:'Hub 저장 완료',skipped:'저장된 에피소드 없음 · 업로드 생략',error:'업로드 실패 · 로컬 데이터 보존'};
+const poses={idle:'대기',tow_stopping:'TOW 송신 종료 중',checking:'상태 확인',ready_gains:'게인 전환',moving:'이동 중',settling:'도착 확인',waiting:'도착 확인',tow_restoring:'TOW 재연결 중',complete:'완료',error:'오류'};
+const put=(id,text)=>$(id).textContent=text;
+function drawPoses(s){
+ const steps=s.pose_steps||[];$('pose-panel').hidden=!steps.length;
+ if(!$('pose-steps').children.length){
+  for(const [index,item] of steps.entries()){
+   const button=document.createElement('button');button.type='button';button.className='pose-step';
+   button.dataset.action='pose';button.dataset.pose=item.id;button.textContent=(index+1)+'. '+item.name;
+   button.title=item.description;button.setAttribute('aria-label',item.name+' · 실제 로봇 이동');
+   button.addEventListener('click',()=>command({action:'pose',pose:item.id}));$('pose-steps').append(button);
+  }
+ }
+ put('pose-mode',s.preview_only?'읽기 전용 · 로봇 연결 없음':'버튼을 누르면 실제 로봇이 이동합니다');
+ put('tow-state','최근 전환 · '+s.tow_phase);
+}
+function draw(s){
+ latest=s;drawPoses(s);
+ if(!loaded){$('name').value=s.defaults.name;$('count').value=s.defaults.num_episodes;$('instruction').value=s.defaults.instruction;loaded=true;}
+ document.querySelectorAll('[data-action]').forEach(b=>b.disabled=pending||!s.actions.includes(b.dataset.action));
+ for(const id of ['name','count','instruction'])$(id).disabled=!s.actions.includes('start')||pending;
+ put('connection','서버 연결됨');$('connection').classList.remove('stale');put('phase',phases[s.phase]||s.phase);
+ put('record-phase',s.record_phase?'Phase '+s.record_phase+' / 6 · '+s.record_phase_labels[s.record_phase]:'기록 단계 대기');
+ const poseName=(s.pose_steps||[]).find(item=>item.id===s.pose_action)?.name||'Init Pose';
+ put('pose-state',poseName+' · '+(poses[s.init_phase]||s.init_phase)+(s.pose_segments?' · '+s.pose_segment+'/'+s.pose_segments:''));
+ put('hint',s.phase==='recording'?'기록 중입니다. 동작이 끝나면 Next를 누르세요.':s.phase==='ready'?'환경을 정리하고 필요하면 Init Pose로 복귀한 다음 Next를 누르세요.':s.phase==='uploading'?'로컬 저장을 마쳤습니다. Hub 커밋이 끝날 때까지 기다려 주세요.':s.phase==='complete'?'저장 경로와 Hub 커밋 결과를 확인하세요. 새 이름과 설정으로 다시 취득할 수 있습니다.':s.upload_phase==='error'?'로컬 저장은 완료됐지만 Hub 업로드에 실패했습니다. 아래 오류와 저장 경로를 확인한 후 Hub 커밋 재시도를 누르세요.':s.phase==='error'?'오류를 확인하세요. 이전에 저장한 에피소드는 보존됩니다.':'설정을 입력하고 취득 시작을 누르세요.');
+ put('stop',!['idle','complete','error'].includes(s.init_phase)?'동작 중단 · 취득 종료':'취득 종료 · 현재 분량 저장');
+ put('next',s.phase==='ready'?'Next · 다음 취득 시작':'Next · 현재 에피소드 저장');
+ put('error',[commandError,s.error,s.init_error].filter(Boolean).join('\n'));
+ put('episodes',s.saved_episodes+' / '+s.target_episodes);put('frames',s.frames);put('seconds',(s.frames/s.fps).toFixed(1)+' s');$('progress').max=s.target_episodes;$('progress').value=s.saved_episodes;
+ put('repo',s.repo_id||'—');put('output',s.output_dir||'—');put('config',s.fps+' FPS · 에피소드 최대 '+s.episode_time_s+'초'+(s.igris_warehouse_schema?' · 위치·토크 17D / 촉각 이미지':'')+' · 완료 후 자동 커밋 · '+(s.hub_private?'비공개':'공개'));put('pose',s.pose_name||'사용 불가');put('writes',s.hardware_executed?s.dds_writes+'회 / 시도 '+s.dds_write_attempts+'회':'실행 없음');
+ put('hub-repo',s.hub_repo_id||'—');put('hub-revision',s.hub_revision||'—');put('hub-totals',s.hub_total_episodes==null?'—':s.hub_total_episodes+' 에피소드 · '+s.hub_total_frames+' 프레임');$('retry-upload').hidden=!s.actions.includes('retry_upload');
+ put('upload-state',uploads[s.upload_phase]||'대기');$('hub-link').hidden=!s.hub_url;$('hub-link').href=s.hub_url||'#';
+}
+async function command(data){
+ if(pending)return;commandError='';pending=true;if(latest)draw(latest);
+ try{
+  const response=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json','X-Record-Token':token},body:JSON.stringify(data)});
+  const s=await response.json();if(!response.ok)throw Error(s.error);latest=s;
+ }catch(e){commandError=e.message;}
+ finally{pending=false;if(latest)draw(latest);}
+}
+$('settings').addEventListener('submit',e=>{e.preventDefault();command({action:'start',name:$('name').value.trim(),num_episodes:Number($('count').value),instruction:$('instruction').value.trim()});});
+document.querySelectorAll('button[data-action]:not(#start)').forEach(b=>b.addEventListener('click',()=>command({action:b.dataset.action})));
+async function poll(){
+ try{const r=await fetch('/status',{cache:'no-store'});if(!r.ok)throw Error('서버 응답 오류');draw(await r.json());}
+ catch(e){put('connection','서버 연결 끊김');$('connection').classList.add('stale');document.querySelectorAll('button').forEach(b=>b.disabled=true);}
+ setTimeout(poll,250);
+}
+poll();
+</script></body></html>

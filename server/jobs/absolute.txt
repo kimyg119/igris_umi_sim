@@ -1,0 +1,12 @@
+ep007_limit_r0 --episode 7 --policy --waist pinned --policy-seconds 105
+ep013_limit_r0 --episode 13 --policy --waist pinned --policy-seconds 121
+ep021_limit_r0 --episode 21 --policy --waist pinned --policy-seconds 126
+ep029_limit_r0 --episode 29 --policy --waist pinned --policy-seconds 118
+ep007_limit_r1 --episode 7 --policy --waist pinned --policy-seconds 105
+ep013_limit_r1 --episode 13 --policy --waist pinned --policy-seconds 121
+ep021_limit_r1 --episode 21 --policy --waist pinned --policy-seconds 126
+ep029_limit_r1 --episode 29 --policy --waist pinned --policy-seconds 118
+ep007_limit_r2 --episode 7 --policy --waist pinned --policy-seconds 105
+ep013_limit_r2 --episode 13 --policy --waist pinned --policy-seconds 121
+ep021_limit_r2 --episode 21 --policy --waist pinned --policy-seconds 126
+ep029_limit_r2 --episode 29 --policy --waist pinned --policy-seconds 118

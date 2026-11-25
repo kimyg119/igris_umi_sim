@@ -1,0 +1,45 @@
+{
+  "csv_path": "data/ankle_L_20260119_150324.csv",
+  "selected_pair": {
+    "x": "motor_out",
+    "y": "motor_in",
+    "pair_index": 1
+  },
+  "vertices": [
+    [
+      -0.6301,
+      -0.6178
+    ],
+    [
+      -0.0,
+      -0.6178
+    ],
+    [
+      0.6091,
+      0.0
+    ],
+    [
+      0.6091,
+      0.5236
+    ],
+    [
+      -0.04,
+      0.5236
+    ],
+    [
+      -0.6301,
+      -0.09
+    ]
+  ],
+  "polygon_area_signed": 1.04522921,
+  "polygon_area_abs": 1.04522921,
+  "margin_ratio_0_1": 0.0,
+  "margin_reference": "d_max (max interior distance to boundary, grid-estimated)",
+  "d_max_estimate": 0.41329687460470604,
+  "margin_dist": 0.0,
+  "margined_vertices_same_count": null,
+  "margined_area_abs_same_count": 0.0,
+  "margined_area_grid_estimate": 0.0,
+  "margined_area_note": "same_count inset is robust-approx; grid area is an independent estimate.",
+  "policy": "strict interior; inside_margined = inside_original AND dist_to_boundary > margin_dist"
+}

@@ -1,0 +1,14 @@
+source;share/igris_c_sdk/hook/cmake_prefix_path.ps1
+source;share/igris_c_sdk/hook/cmake_prefix_path.dsv
+source;share/igris_c_sdk/hook/cmake_prefix_path.sh
+source;share/igris_c_sdk/hook/ld_library_path_lib.ps1
+source;share/igris_c_sdk/hook/ld_library_path_lib.dsv
+source;share/igris_c_sdk/hook/ld_library_path_lib.sh
+source;share/igris_c_sdk/hook/pythonpath.ps1
+source;share/igris_c_sdk/hook/pythonpath.dsv
+source;share/igris_c_sdk/hook/pythonpath.sh
+source;share/igris_c_sdk/local_setup.bash
+source;share/igris_c_sdk/local_setup.dsv
+source;share/igris_c_sdk/local_setup.ps1
+source;share/igris_c_sdk/local_setup.sh
+source;share/igris_c_sdk/local_setup.zsh

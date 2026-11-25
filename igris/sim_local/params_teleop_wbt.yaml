@@ -1,0 +1,43 @@
+# 학습한 학생(igris_c_wbt exports) 재생용 — params_teleop_wristhold.yaml 과 동일하되 policy.onnx_path 만 교체
+# 로컬 컨테이너 시뮬 전용 params — 텔레옵(ROS2 모션 입력) 모드.
+# motion_source.type = ros2 : /gmr/teleop/retarget_frame 를 구독한다.
+# onnx_path 는 ros2 모드에서 fallback(녹화 레퍼런스) 소스로도 쓰인다.
+igris_c_gmt_public:
+  robot:
+    domain_id: 0
+    namespace: "igris_c_001"
+    cyclonedds_xml_path: "/robros/configs/cyclonedds/cyclonedds_local.xml"
+
+  loop:
+    control_hz: 300
+    policy_hz: 50
+
+  observation:
+    config_path: "/igris/igris_c_gmt_public/config/obs.yaml"
+
+  action:
+    config_path: "/igris/sim_local/action_wrist_hold.yaml"
+
+  motion_source:
+    type: "ros2"
+    csv_path: ""
+    onnx_path: "/igris/igris_c_gmt_public/data/onnx/recorded_standstill.onnx"
+    ros_config_path: "/igris/igris_c_gmt_public/config/ros.yaml"
+    fps: 50.0
+    frame_timeout_ms: 100
+    loop: true
+
+  policy:
+    onnx_path: "/igris/igris_c_wbt/exports/box_student/student.onnx"
+
+  filters:
+    q_dot_lpf_cutoff_hz: 16.0
+    imu_ang_vel_lpf_cutoff_hz: 50.0
+    reference_joint_velocity_lpf_cutoff_hz: 8.0
+    reference_anchor_linear_velocity_lpf_cutoff_hz: 8.0
+    reference_anchor_angular_velocity_lpf_cutoff_hz: 8.0
+
+  logging:
+    enabled: false
+    csv_path: "/igris/sim_local/inference_log.csv"
+    only_low_command_mode: false

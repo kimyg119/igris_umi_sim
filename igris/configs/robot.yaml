@@ -1,0 +1,117 @@
+version: 1
+# This file must be placed in the /robros/configs directory of the robot's file system.
+# It contains the configuration settings for the robot, including its name, description, network setting, end effector type, controller settings, CAN settings, and IMU settings.
+# The configuration is organized in a hierarchical structure, with each section containing specific settings related to that aspect of the robot's functionality.
+# The settings can be customized to suit the specific requirements of the robot and its intended applications.
+
+igris_c:
+  name: "IGRIS_C"
+  note: "IGRIS_C is a humanoid robot designed for research and development in robotics and artificial intelligence."
+
+  network:
+    cyclonedds:
+      namespace:
+        suffix_policy: "custom" # Options: "ap_suffix", "serial_suffix", "custom", "none", "auto"
+        suffix_policy_options: ["ap_suffix", "serial_suffix", "custom", "none", "auto"]
+        suffix_policy_show_user: true
+        user_suffix: "001" # Custom suffix for namespace if namespace_suffix_policy is set to "custom"
+        user_suffix_pattern: '^.{3,}$' # web dashboard: editable, must be 3+ characters
+        user_suffix_show_user: true
+
+      # dds_network_interface: "wlo1" # Network interface for DDS communication (e.g., "wlo1", "eth0")
+      uri_file: "file:///robros/configs/cyclonedds/cyclonedds.xml" # Path to CycloneDDS XML configuration Only NIC specified in the XML will be used for DDS communication
+      domain_id: 0
+      domain_id_pattern: '^(?!1$)\d+$' # web dashboard: editable, any non-negative integer except 1
+      domain_id_show_user: true
+      port: 9000
+      port_range: [1024, 65535] # web dashboard: editable, valid non-privileged TCP port range
+      port_show_user: true
+      tcp_bind_ip: "0.0.0.0"
+
+  camera:
+    source: "direct" # Options: "direct" (camera on NUC publishes externally via igris_c.network.cyclonedds) | "jetson" (camera on Jetson; route relays LAN -> external)
+    source_options: ["direct", "jetson"]
+    publish_type: "dds" # Options: "dds" (publish via DDS; requires cyclonedds configuration) | "h264" (publish H264 stream via GStreamer; requires GStreamer pipeline configuration)
+    publish_type_options: ["dds"]
+    uri_file: "file:///robros/configs/cyclonedds/cyclonedds_camera.xml" # jetson-only LAN DDS XML for the route service; ignored when source is "direct"
+    domain_id: 1 # jetson-only LAN domain for the route service; ignored when source is "direct"
+
+  description:
+    config_root_dir       : "/robros/configs/description"
+    urdf:
+      robot_model_path: "urdf/igris_c_v2.urdf.xacro" # Main body model entry. Relative paths are resolved under description.config_root_dir. Consumers accept .urdf or .urdf.xacro.
+      parallel_links_path: "urdf/igris_c_v2_parallel_links.urdf.xacro" # Standalone 4-bar linkage entry for JointManager. This stays xacro-only and uses variant:=waist|left_ankle|right_ankle|left_wrist|right_wrist.
+    mujoco:
+      robot_model_path: "mujoco/igris_c_v2.xml.xacro" # Simulation model entry. Relative paths are resolved under description.config_root_dir. Consumers accept .xml or .xml.xacro.
+      base_type: "pelvis" # Options: "torso", "pelvis"
+      base_type_options: ["torso", "pelvis"]
+      base_type_show_user: true
+      parallel: "true" # Options: "true", "false". Keep this as the literal strings "true"/"false". true = parallel-link motor-space actuator topology. false = serial joint-space actuator topology; MujocoSimController remaps controller MS outputs to serial joint-space before writing to MuJoCo.
+      parallel_options: ["true", "false"]
+      parallel_show_user: true
+      fixed: "false" # Options: "true", "false"
+      fixed_options: ["true", "false"]
+      fixed_show_user: true
+
+  end_effector:
+    type: none # Options: "dummy", "none", "hand", "magnet", "1dof"
+    type_options: ["dummy", "none", "hand", "magnet", "1dof"]
+    type_show_user: true
+    initialize_on_startup: false # Whether to initialize the end effector on startup
+    publish_rate: 30.0
+
+    dummy:
+      convergence_rate: 2.0
+
+  controller:
+    config_root_dir           : "/robros/configs/controller"
+    motion_root_dir           : "/robros/configs/motions"
+    safe_set_root_dir         : "/robros/configs/controller/safe_set_polygons"
+    gain_parameter_path       : "/robros/configs/controller/params.yaml"
+    onnx_root_dir             : "/robros/configs/controller/nn_model/onnx"
+
+    GravityCompensationModule:
+      enabled: true # Master on/off switch for gravity compensation. This only enables the module itself.
+                    # Actual output is still shaped by igris_c.controller.gain_parameter_path:
+                    # 1) gravity_comp_gain per joint scales the computed torque (0.0 disables that joint)
+                    # 2) gravity_comp_offset adds a per-joint bias after scaling
+                    # 3) runtime safety can still suppress output on motor error, and bridge-command mode also suppresses it when torso kp is too small
+      enabled_options: [true, false]
+      enabled_show_user: true
+  can:
+    setup: false # Options: true, false (true runs full motor init incl. ROM/PID writes; false skips writes and only verifies motor presence via position/firmware/model/PID readback)
+    setup_options: [true, false]
+    setup_force_install: true # install always resets `setup` to packaged; operator may still toggle at runtime
+    setup_show_user: true
+    setup_stable_hold_seconds: 30
+    setup_stable_hold_seconds_range: [0, 300]
+    motor:
+      config_root_dir: "/robros/configs/hardware"
+
+    pdu:
+      battery_level_min_adc: 0
+      battery_level_min_adc_range: [0, 255]
+      battery_level_max_adc: 242
+      battery_level_max_adc_range: [0, 255]
+      disconnect_behavior: "running" # Options: "stop", "running" (running keeps control on PDU CAN loss; safe because E-STOP cuts power in hardware)
+      disconnect_behavior_options: ["stop", "running"]
+
+  imu:
+    type: 3DM-CV7-AR # Options: "IM10A", "3DM-GV7-AHRS", "3DM-CV7-AR" default is "IM10A"
+    type_options: ["IM10A", "3DM-GV7-AHRS", "3DM-CV7-AR"]
+      
+  joystick:
+    enabled: false # Options: true, false (run the joystick teleop receiver node)
+    enabled_options: [true, false]
+    # Walk-twist transport. Only "cyclonedds" is supported: publish WalkTwist on rt/cmd_vel,
+    # which the bridge forwards into walk_buffer (bridge stays the sole SPSC producer).
+    # Button commands (torque/walkmode/motions) always go over cyclonedds services.
+    transport: "cyclonedds"
+    transport_options: ["cyclonedds"]
+    device_path: "/dev/igris_c_joystick"
+    # false (default): stay silent while no gamepad is connected; on a disconnect flush
+    # disconnect_zero_pub_count zero commands (fail-safe stop) then go silent.
+    # true: legacy behavior -- always publish zero while no device is open.
+    publish_when_disconnected: false
+    publish_when_disconnected_options: [true, false]
+    disconnect_zero_pub_count: 5 # zero commands emitted on disconnect (20 Hz -> 5 = 250 ms)

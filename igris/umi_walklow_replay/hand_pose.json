@@ -1,0 +1,56 @@
+{
+  "description": "RCV hand posture used in simulation. sim_rad is the URDF joint angle; real_deg is the real-robot Dynamixel target supplied by the user on 2026-11-23 for the same slightly bent posture. zero_offset_deg = real_deg - real_sign * degrees(sim_rad) is the implied encoder zero of the current assembly. The simulated posture is identical on both hands (mirror symmetric).",
+  "urdf_joints": {
+    "mcp": "<side>_hand_dof_joint_mcp",
+    "thumb_cmc": "<side>_hand_dof_joint_cmc",
+    "thumb_ip": "<side>_hand_dof_joint_mcp_thumb"
+  },
+  "vendor_baked_deg": {
+    "mcp": 10.0,
+    "thumb_cmc": -60.0,
+    "thumb_ip": -60.0
+  },
+  "thumb_sign_verified_on_hardware": false,
+  "joints": {
+    "left": {
+      "mcp": {
+        "real_deg": 325.8984,
+        "sim_rad": 0.3141592653589793,
+        "real_sign": 1,
+        "zero_offset_deg": 307.8984
+      },
+      "thumb_cmc": {
+        "real_deg": 321.7676,
+        "sim_rad": -0.8726646259971648,
+        "real_sign": 1,
+        "zero_offset_deg": 371.7676
+      },
+      "thumb_ip": {
+        "real_deg": 248.2031,
+        "sim_rad": -0.7853981633974483,
+        "real_sign": -1,
+        "zero_offset_deg": 203.2031
+      }
+    },
+    "right": {
+      "mcp": {
+        "real_deg": 170.0684,
+        "sim_rad": 0.3141592653589793,
+        "real_sign": -1,
+        "zero_offset_deg": 188.0684
+      },
+      "thumb_cmc": {
+        "real_deg": 111.3574,
+        "sim_rad": -0.8726646259971648,
+        "real_sign": -1,
+        "zero_offset_deg": 61.3574
+      },
+      "thumb_ip": {
+        "real_deg": 170.9473,
+        "sim_rad": -0.7853981633974483,
+        "real_sign": 1,
+        "zero_offset_deg": 215.9473
+      }
+    }
+  }
+}

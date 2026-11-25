@@ -1,0 +1,15 @@
+# /dev/igris_c_joystick -> the gamepad's joystick event node.
+#
+# The 8BitDo Ultimate 2 enumerates with a different USB id per mode (controller's
+# X/D switch + button-on-power combo):
+#   D-input / "for PC"  -> 2dc8:310b
+#   X-input (Xbox)      -> 045e:028e
+# Match BOTH so the symlink works regardless of which mode the controller boots in.
+# ENV{ID_INPUT_JOYSTICK}==1 selects the gamepad event node, not the composite
+# device's keyboard/mouse interfaces.
+#
+# NOTE: X-input streams state continuously (the node's watchdog relies on this);
+# D-input may be change-only, which can trip the watchdog while a stick is held.
+# Prefer X-input for teleop if your firmware's D-input doesn't stream.
+SUBSYSTEM=="input", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="310b", ENV{ID_INPUT_JOYSTICK}=="1", KERNEL=="event*", SYMLINK+="igris_c_joystick", MODE="0660", GROUP="input"
+SUBSYSTEM=="input", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="028e", ENV{ID_INPUT_JOYSTICK}=="1", KERNEL=="event*", SYMLINK+="igris_c_joystick", MODE="0660", GROUP="input"

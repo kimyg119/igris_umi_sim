@@ -1,0 +1,166 @@
+{
+  "mode": "off",
+  "separate_waist": true,
+  "mass": 1.0,
+  "motion": "box",
+  "world_registered": true,
+  "command_acceleration_rad_s2": 2.0,
+  "branch_guard_rad": 0.1,
+  "balance_relock_preserves_warm_start": true,
+  "squeeze_m": 0.035,
+  "preload_limit_m": 0.05,
+  "hand_orientation_weight": 0.5,
+  "contact_target": "palm_tip_seated",
+  "hand_diagonal_deg": [
+    -45.0,
+    45.0
+  ],
+  "surface_force_N": 0.5,
+  "secondary_force_N": 0.2,
+  "palm_primary_load": true,
+  "noslip_iterations": 10,
+  "palm_seat": {
+    "pivots": [
+      [
+        0.3688465621866188,
+        0.04287077107324264,
+        0.006431188140325811
+      ],
+      [
+        0.3705269096618148,
+        -0.037422139444903454,
+        0.007060881071315769
+      ]
+    ],
+    "rotvecs": [
+      [
+        -0.10193812072635647,
+        -0.0029657671092609486,
+        -0.106144766827461
+      ],
+      [
+        0.1019381207263568,
+        0.0029657671092612747,
+        0.10614476682746099
+      ]
+    ],
+    "approach_offset": [
+      0.0,
+      0.08,
+      0.0
+    ],
+    "fraction_limit": 1.4228540254280817
+  },
+  "palm_seat_limit": 1.4228540254280817,
+  "approach_waypoint_world_offset_m": [
+    0.0,
+    0.08,
+    0.0
+  ],
+  "approach_orientation_complete_s": 15.0,
+  "approach_rotation_path": "linear_wrist_then_linear_tool",
+  "fixed_hand_joint_values": {
+    "l_hand_dof_joint_mcp": 0.5235987755982988,
+    "l_hand_dof_joint_dip": 0.0,
+    "l_hand_dof_joint_cmc": -1.0471975511965976,
+    "l_hand_dof_joint_mcp_thumb": -1.0471975511965976,
+    "r_hand_dof_joint_mcp": 0.5235987755982988,
+    "r_hand_dof_joint_dip": 0.0,
+    "r_hand_dof_joint_cmc": -1.0471975511965976,
+    "r_hand_dof_joint_mcp_thumb": -1.0471975511965976
+  },
+  "box_radius": 0.37,
+  "box_z": 0.8,
+  "base_position": [
+    -0.009058234144107231,
+    0.005064025248500327,
+    0.8704559106566288
+  ],
+  "base_quat_xyzw": [
+    0.0038150665188304163,
+    0.01005726587740762,
+    -0.01050080294678894,
+    0.9998870085204632
+  ],
+  "friction": 1.2,
+  "scale": 1,
+  "duration": 82.66451573371887,
+  "contact_driven": false,
+  "wrist_kp": 400,
+  "wrist_kd": 2,
+  "start_wall": 1789363560.6071224,
+  "tools": [
+    "end_effector_left",
+    "end_effector_right"
+  ],
+  "closed_ee": [
+    [
+      0.4149420611399377,
+      0.08378881929517865,
+      -0.06100830567799476
+    ],
+    [
+      0.41831596567813406,
+      -0.07742820229175443,
+      -0.05974396965886918
+    ]
+  ],
+  "initial_q": [
+    -0.0011452640173956752,
+    0.00010480792116140947,
+    -0.0005359894712455571,
+    -0.4171130657196045,
+    0.001729870098643005,
+    -0.00480817211791873,
+    0.65952068567276,
+    -0.2648274898529053,
+    0.0023212763480842113,
+    -0.513238787651062,
+    -0.04059022292494774,
+    0.061249591410160065,
+    0.6426590085029602,
+    -0.18305827677249908,
+    0.041070159524679184,
+    -0.6486883163452148,
+    0.4787100851535797,
+    -0.1034897118806839,
+    -1.8382933139801025,
+    0.4937361180782318,
+    0.10731000453233719,
+    0.3923695683479309,
+    -0.6460049748420715,
+    -0.4797509014606476,
+    0.09387419372797012,
+    -1.848149061203003,
+    -0.48302173614501953,
+    -0.1145566925406456,
+    0.3833220601081848,
+    -1.7322729036095552e-05,
+    0.013311418704688549
+  ],
+  "input": "100 Hz open-loop Motion replay from reconstructed torso EE poses; contact does not gate progression",
+  "preserve_relative": false,
+  "hold_waist": false,
+  "grasp_quats_xyzw": [
+    [
+      -0.059444611822710394,
+      0.3904124081887647,
+      -0.03625824582007481,
+      -0.9180031749768339
+    ],
+    [
+      0.058458964747963985,
+      0.39184295636085614,
+      0.013981253272856453,
+      -0.9180665398259
+    ]
+  ],
+  "ready_joint_error_rad": 0.028330239891815212,
+  "initial_posture": "raised pregrasp home: palms inward, elbows out",
+  "sim_arm_gains": null,
+  "squeeze_hold": true,
+  "hardware_executed": false,
+  "replay_gains_config": "/home/rcv/workspace/Project_Humanoid/igris/sim_local/vr_box_eval/results/20260914_synthetic_motion100_1kg/replay_gains.toml",
+  "target_frame": "torso",
+  "backlash_compensated": false
+}

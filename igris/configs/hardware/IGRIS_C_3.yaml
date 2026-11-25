@@ -1,0 +1,255 @@
+version: 2
+description: This file contains the configuration for the IGRIS C bionic robot, including motor settings and their respective parameters.
+settings:
+  name: IGRIS_C_channel_3
+
+motors:
+- name: 1_Waist_Yaw
+  id: 1
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 3
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 2_Waist_Left
+  id: 2
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 3
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 4_Hip_Pitch_Left
+  id: 4
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: BIONIC_X12_150
+  can_channel: 3
+  protocol: bionic
+  acceleration: 5.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 3.33
+  max_torque: 150.0
+  interrupt_time: 0.5
+  interrupt_time_options: [0.0, 0.5]
+
+  position_kp: -1.0
+  position_ki: -1.0
+  position_kd: -1.0
+  speed_kp: -1.0
+  speed_ki: -1.0
+  speed_kd: -1.0
+  current_kp: -1.0
+  current_ki: -1.0
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 0.9661
+  motion_mode_kd_scale: 0.9661
+
+  motion_mode_kp_max: 500.0
+  motion_mode_kd_max: 50.0
+
+- name: 5_Hip_Roll_Left
+  id: 5
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X8_P20_120
+  can_channel: 3
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 2.1528
+  max_torque: 120.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.008000
+  position_ki: 0.000000
+  position_kd: 0.100000
+  speed_kp: 0.030000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.800000
+  current_ki: 0.080000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 6_Hip_Yaw_Left
+  id: 6
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: RMD_X6_P20_60
+  can_channel: 3
+  protocol: v4
+  acceleration: 0.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 1.7348
+  max_torque: 60.0
+  over_voltage: 59.0
+  stall_time: 3.0
+  interrupt_time: 0.5
+
+  position_kp: 0.060000
+  position_ki: 0.000000
+  position_kd: 0.500000
+  speed_kp: 0.010000
+  speed_ki: 0.000100
+  speed_kd: -1.0
+  current_kp: 0.500000
+  current_ki: 0.050000
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 1.0
+  motion_mode_kd_scale: 1.0
+
+  motion_mode_kp_max: -1.0
+  motion_mode_kd_max: -1.0
+
+- name: 7_Knee_Pitch_Left
+  id: 7
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: BIONIC_X12_150
+  can_channel: 3
+  protocol: bionic
+  acceleration: 5.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 3.33
+  max_torque: 150.0
+  interrupt_time: 0.5
+  interrupt_time_options: [0.0, 0.5]
+
+  position_kp: -1.0
+  position_ki: -1.0
+  position_kd: -1.0
+  speed_kp: -1.0
+  speed_ki: -1.0
+  speed_kd: -1.0
+  current_kp: -1.0
+  current_ki: -1.0
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 0.9661
+  motion_mode_kd_scale: 0.9661
+
+  motion_mode_kp_max: 500.0
+  motion_mode_kd_max: 50.0
+
+- name: 8_Ankle_Out_Left
+  id: 8
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: BIONIC_X8_90
+  can_channel: 3
+  protocol: bionic
+  acceleration: 5.0
+  offset: 0.0
+  urdf_axis_dir: 1
+  torque_constant: 2.5
+  max_torque: 90.0
+  interrupt_time: 0.5
+
+  position_kp: -1.0
+  position_ki: -1.0
+  position_kd: -1.0
+  speed_kp: -1.0
+  speed_ki: -1.0
+  speed_kd: -1.0
+  current_kp: -1.0
+  current_ki: -1.0
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 0.9259
+  motion_mode_kd_scale: 0.9259
+
+  motion_mode_kp_max: 500.0
+  motion_mode_kd_max: 5.0
+
+- name: 9_Ankle_In_Left
+  id: 9
+  ignore: false
+  ignore_options: [true, false]
+  motor_class: BIONIC_X8_90
+  can_channel: 3
+  protocol: bionic
+  acceleration: 5.0
+  offset: 0.0
+  urdf_axis_dir: -1
+  torque_constant: 2.5
+  max_torque: 90.0
+  interrupt_time: 0.5
+
+  position_kp: -1.0
+  position_ki: -1.0
+  position_kd: -1.0
+  speed_kp: -1.0
+  speed_ki: -1.0
+  speed_kd: -1.0
+  current_kp: -1.0
+  current_ki: -1.0
+  current_kd: -1.0
+
+  motion_mode_kp_scale: 0.9259
+  motion_mode_kd_scale: 0.9259
+
+  motion_mode_kp_max: 500.0
+  motion_mode_kd_max: 5.0

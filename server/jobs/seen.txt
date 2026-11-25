@@ -1,0 +1,12 @@
+ep000_r0 --episode 0 --policy --waist pinned --policy-seconds 106
+ep005_r0 --episode 5 --policy --waist pinned --policy-seconds 106
+ep010_r0 --episode 10 --policy --waist pinned --policy-seconds 106
+ep020_r0 --episode 20 --policy --waist pinned --policy-seconds 132
+ep000_r1 --episode 0 --policy --waist pinned --policy-seconds 106
+ep005_r1 --episode 5 --policy --waist pinned --policy-seconds 106
+ep010_r1 --episode 10 --policy --waist pinned --policy-seconds 106
+ep020_r1 --episode 20 --policy --waist pinned --policy-seconds 132
+ep000_r2 --episode 0 --policy --waist pinned --policy-seconds 106
+ep005_r2 --episode 5 --policy --waist pinned --policy-seconds 106
+ep010_r2 --episode 10 --policy --waist pinned --policy-seconds 106
+ep020_r2 --episode 20 --policy --waist pinned --policy-seconds 132

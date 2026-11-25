@@ -1,0 +1,70 @@
+{
+  "csv_path": "data/wrist_L_20251231_164548.csv",
+  "selected_pair": {
+    "x": "motor_front",
+    "y": "motor_back",
+    "pair_index": 1
+  },
+  "vertices": [
+    [
+      -0.9826,
+      -0.9826
+    ],
+    [
+      -0.43,
+      -0.9826
+    ],
+    [
+      0.7575,
+      0.33
+    ],
+    [
+      0.7575,
+      0.7575
+    ],
+    [
+      0.315,
+      0.7575
+    ],
+    [
+      -0.9826,
+      -0.39
+    ]
+  ],
+  "polygon_area_signed": 1.5040937600000002,
+  "polygon_area_abs": 1.5040937600000002,
+  "margin_ratio_0_1": 0.1,
+  "margin_reference": "d_max (max interior distance to boundary, grid-estimated)",
+  "d_max_estimate": 0.3914651583820144,
+  "margin_dist": 0.039146515838201446,
+  "margined_vertices_same_count": [
+    [
+      -0.9434534841617985,
+      -0.9434534841617985
+    ],
+    [
+      -0.44737374734757357,
+      -0.9434534841617985
+    ],
+    [
+      0.7183534841617985,
+      0.34508004348384513
+    ],
+    [
+      0.7183534841617985,
+      0.7183534841617985
+    ],
+    [
+      0.3298262607428847,
+      0.7183534841617986
+    ],
+    [
+      -0.9434534841617985,
+      -0.4076395085001343
+    ]
+  ],
+  "margined_area_abs_same_count": 1.2937110537936607,
+  "margined_area_grid_estimate": 1.2996198322152661,
+  "margined_area_note": "same_count inset is robust-approx; grid area is an independent estimate.",
+  "policy": "strict interior; inside_margined = inside_original AND dist_to_boundary > margin_dist"
+}

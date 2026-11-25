@@ -1,0 +1,97 @@
+{
+  "source": "igris/configs/controller/safe_set_polygons, vendor snapshot 2026-09-10; joint-space radians. JointManager uses HARD ratio 0.95.",
+  "coupled_limits": [
+    {
+      "joints": [
+        "waist_roll",
+        "waist_pitch"
+      ],
+      "vertices": [
+        [
+          -0.3766,
+          -0.7449
+        ],
+        [
+          0.3766,
+          -0.7449
+        ],
+        [
+          0.4103,
+          -0.148
+        ],
+        [
+          0.0,
+          0.3005
+        ],
+        [
+          -0.4103,
+          -0.148
+        ]
+      ]
+    },
+    {
+      "joints": [
+        "l_wrist_roll",
+        "l_wrist_pitch"
+      ],
+      "vertices": [
+        [
+          -1.4829,
+          0.0
+        ],
+        [
+          -1.0109,
+          -0.5915
+        ],
+        [
+          0.6529,
+          -0.5817
+        ],
+        [
+          0.96,
+          0.0
+        ],
+        [
+          0.6414,
+          0.6
+        ],
+        [
+          -0.9816,
+          0.64
+        ]
+      ]
+    },
+    {
+      "joints": [
+        "r_wrist_roll",
+        "r_wrist_pitch"
+      ],
+      "vertices": [
+        [
+          -0.96,
+          0.0
+        ],
+        [
+          -0.6529,
+          -0.5817
+        ],
+        [
+          1.0109,
+          -0.5915
+        ],
+        [
+          1.4829,
+          0.0
+        ],
+        [
+          0.9816,
+          0.64
+        ],
+        [
+          -0.6414,
+          0.6
+        ]
+      ]
+    }
+  ]
+}

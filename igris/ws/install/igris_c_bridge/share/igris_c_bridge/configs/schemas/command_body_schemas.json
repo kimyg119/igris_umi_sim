@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "commandBody schemas for control commands",
+  "definitions": {
+    "MOTION_PRESET": {
+      "type": "object",
+      "required": ["presetId"],
+      "properties": {
+        "presetId": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "MOTION_PRESET_CYCLIC_TOGGLE": {
+      "type": "object",
+      "required": ["cyclic"],
+      "properties": {
+        "cyclic": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "JOINT_POSITION_HOLD": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "MOTION_STOP": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "JOYSTICK_CONTROL": {
+      "type": "object",
+      "required": ["leftJoystick", "rightJoystick"],
+      "properties": {
+        "leftJoystick": {
+          "type": "object",
+          "required": ["x", "y"],
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "additionalProperties": false
+        },
+        "rightJoystick": {
+          "type": "object",
+          "required": ["x", "y"],
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "WALKMODE_ON": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "LOW_LEVEL_JOINT_CONTROL": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "HIGH_LEVEL_JOINT_CONTROL": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "LOW_LEVEL_WALKMODE_ON": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "HIGH_LEVEL_WALKMODE_ON": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_1": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_2": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_3": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_4": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_5": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_6": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_7": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_8": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_9": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "CUSTOM_MODE_10": {
+      "type": "object",
+      "additionalProperties": false
+    }
+  }
+}

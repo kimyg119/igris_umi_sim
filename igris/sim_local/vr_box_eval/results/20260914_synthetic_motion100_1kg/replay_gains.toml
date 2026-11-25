@@ -1,0 +1,75 @@
+# replay-q LowCmd gains, SDK PJS coordinates. Loaded once per CLI invocation.
+# Edit and restart replay-q to apply; existing motion never hot-reloads this file.
+# Vendor real profile scaled: kp_real x5, kd_real x2.
+# Source: igris/configs/controller/params.yaml.
+# Kd <= 5 in this replay profile, per operator constraint.
+# igris_core validates finite non-negative Kp, without treating presets as vendor ceilings.
+# Legs and neck are intentionally excluded; their outgoing Kp/Kd remain zero.
+
+[motion.gains.waist_yaw]
+kp = 250.0
+kd = 4.0
+
+[motion.gains.waist_roll]
+kp = 250.0
+kd = 4.0
+
+[motion.gains.waist_pitch]
+kp = 250.0
+kd = 4.0
+
+[motion.gains.left_shoulder_pitch]
+kp = 250.0
+kd = 4.0
+
+[motion.gains.left_shoulder_roll]
+kp = 250.0
+kd = 3.0
+
+[motion.gains.left_shoulder_yaw]
+kp = 150.0
+kd = 3.0
+
+[motion.gains.left_elbow_pitch]
+kp = 200
+kd = 1.5
+
+[motion.gains.left_wrist_yaw]
+kp = 400.0
+kd = 2.0
+
+[motion.gains.left_wrist_roll]
+kp = 400.0
+kd = 2.0
+
+[motion.gains.left_wrist_pitch]
+kp = 400.0
+kd = 2.0
+
+[motion.gains.right_shoulder_pitch]
+kp = 250.0
+kd = 4.0
+
+[motion.gains.right_shoulder_roll]
+kp = 250.0
+kd = 3.0
+
+[motion.gains.right_shoulder_yaw]
+kp = 150.0
+kd = 3.0
+
+[motion.gains.right_elbow_pitch]
+kp = 200
+kd = 1.5
+
+[motion.gains.right_wrist_yaw]
+kp = 400.0
+kd = 2.0
+
+[motion.gains.right_wrist_roll]
+kp = 400.0
+kd = 2.0
+
+[motion.gains.right_wrist_pitch]
+kp = 400.0
+kd = 2.0

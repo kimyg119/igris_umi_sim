@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>igris_c_imu</name>
+  <version>0.1.0</version>
+  <description>Hiwonder IMU 센서를 공유 메모리에 push하는 Preempt-RT 기반 센서 노드</description>
+  <maintainer email="dong0505dong@robros.co.kr">양동수</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>igris_c_lib</depend>
+
+  <build_depend>rcl</build_depend>
+  <build_depend>rclc</build_depend>
+
+  <exec_depend>rcl</exec_depend>
+  <exec_depend>rclc</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

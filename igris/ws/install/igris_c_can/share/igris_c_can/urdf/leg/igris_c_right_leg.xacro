@@ -1,0 +1,136 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="igris_c_right_leg" params="parent">
+
+        <link name="Hip_Pitch_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Hip_Roll_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Hip_Yaw_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Knee_Pitch_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Ankle_Out_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+        <link name="Ankle_In_Right_Link">
+            <visual>
+                <origin xyz="0.25 0 0" rpy="0 1.5708 0"/>
+
+                <geometry>
+                    <cylinder radius="0.02" length="0.5"/>
+                </geometry>
+
+                <material name="random">
+                    <color rgba="0.7 0.7 0.7 0.7"/>
+                </material>
+            </visual>
+        </link>
+
+
+
+        <joint name="10_Hip_Pitch_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Hip_Pitch_Right_Link"/>
+            <origin xyz="2 4 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-2.0584" upper="0.5233" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="11_Hip_Roll_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Hip_Roll_Right_Link"/>
+            <origin xyz="2 5 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-2.3550" upper="0.3314" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="12_Hip_Yaw_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Hip_Yaw_Right_Link"/>
+            <origin xyz="2 6 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-1.5708" upper="1.5708" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="13_Knee_Pitch_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Knee_Pitch_Right_Link"/>
+            <origin xyz="3 1 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.087" upper="2.2852" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="14_Ankle_Out_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Ankle_Out_Right_Link"/>
+            <origin xyz="3 2 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.7117" upper="0.6908" effort="0.0" velocity="0.0"/>
+        </joint>
+
+        <joint name="15_Ankle_In_Right" type="revolute">
+            <parent link="base_link"/>
+            <child link="Ankle_In_Right_Link"/>
+            <origin xyz="3 3 1"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="-0.7679" upper="0.8133" effort="0.0" velocity="0.0"/>
+        </joint>
+
+
+    </xacro:macro>
+</robot>

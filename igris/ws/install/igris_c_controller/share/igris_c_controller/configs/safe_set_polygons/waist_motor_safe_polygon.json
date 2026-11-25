@@ -1,0 +1,41 @@
+{
+  "csv_path": "data/waist_20260119_163949.csv",
+  "selected_pair": {
+    "x": "motor_L",
+    "y": "motor_R",
+    "pair_index": 1
+  },
+  "vertices": [
+    [
+      -0.6667,
+      0.92
+    ],
+    [
+      -0.3,
+      -0.3
+    ],
+    [
+      0.92,
+      -0.6667
+    ],
+    [
+      1.4382,
+      0.0
+    ],
+    [
+      0.0,
+      1.4382
+    ]
+  ],
+  "polygon_area_signed": 2.4690675599999996,
+  "polygon_area_abs": 2.4690675599999996,
+  "margin_ratio_0_1": 0.0,
+  "margin_reference": "d_max (max interior distance to boundary, grid-estimated)",
+  "d_max_estimate": 0.6697224514688315,
+  "margin_dist": 0.0,
+  "margined_vertices_same_count": null,
+  "margined_area_abs_same_count": 0.0,
+  "margined_area_grid_estimate": 0.0,
+  "margined_area_note": "same_count inset is robust-approx; grid area is an independent estimate.",
+  "policy": "strict interior; inside_margined = inside_original AND dist_to_boundary > margin_dist"
+}

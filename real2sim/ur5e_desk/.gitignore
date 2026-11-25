@@ -1,0 +1,5 @@
+# outputs of the check scripts, build scratch, hand-off archives
+renders/
+work/
+dist/
+__pycache__/

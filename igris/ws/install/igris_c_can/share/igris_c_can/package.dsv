@@ -1,0 +1,11 @@
+source;share/igris_c_can/hook/cmake_prefix_path.ps1
+source;share/igris_c_can/hook/cmake_prefix_path.dsv
+source;share/igris_c_can/hook/cmake_prefix_path.sh
+source;share/igris_c_can/hook/ld_library_path_lib.ps1
+source;share/igris_c_can/hook/ld_library_path_lib.dsv
+source;share/igris_c_can/hook/ld_library_path_lib.sh
+source;share/igris_c_can/local_setup.bash
+source;share/igris_c_can/local_setup.dsv
+source;share/igris_c_can/local_setup.ps1
+source;share/igris_c_can/local_setup.sh
+source;share/igris_c_can/local_setup.zsh

@@ -1,0 +1,923 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "igris_c_v2"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpw9xl_4wn/igris_c_v2.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_igris_c_v2_pelvis_1dof_xscd0clb/usdex_igris_c_v2_pelvis_1dof/igris_c_v2.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_igris_c_v2_pelvis_1dof_xscd0clb/temp_igris_c_v2_pelvis_1dof/igris_c_v2_pelvis_1dof.usd
+
+
+Generated from Composed Stage of root layer /home/rcv/workspace/Project_Humanoid/igris/igris_c_description_public/urdf/igris_c_v2_pelvis_1dof/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "igris_c_v2"
+{
+    over "Physics"
+    {
+        def MjcActuator "waist_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/waist_pitch>
+        }
+
+        def MjcActuator "waist_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/waist_roll>
+        }
+
+        def MjcActuator "waist_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/waist_yaw>
+        }
+
+        def MjcActuator "l_hip_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_hip_pitch>
+        }
+
+        def MjcActuator "l_hip_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_hip_roll>
+        }
+
+        def MjcActuator "l_hip_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_hip_yaw>
+        }
+
+        def MjcActuator "l_knee_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_knee_pitch>
+        }
+
+        def MjcActuator "l_ankle_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_ankle_pitch>
+        }
+
+        def MjcActuator "l_ankle_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_ankle_roll>
+        }
+
+        def MjcActuator "r_hip_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_hip_pitch>
+        }
+
+        def MjcActuator "r_hip_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_hip_roll>
+        }
+
+        def MjcActuator "r_hip_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_hip_yaw>
+        }
+
+        def MjcActuator "r_knee_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_knee_pitch>
+        }
+
+        def MjcActuator "r_ankle_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_ankle_pitch>
+        }
+
+        def MjcActuator "r_ankle_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_ankle_roll>
+        }
+
+        def MjcActuator "l_shoulder_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_shoulder_pitch>
+        }
+
+        def MjcActuator "l_shoulder_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_shoulder_roll>
+        }
+
+        def MjcActuator "l_shoulder_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_shoulder_yaw>
+        }
+
+        def MjcActuator "l_elbow_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_elbow_pitch>
+        }
+
+        def MjcActuator "l_wrist_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_wrist_yaw>
+        }
+
+        def MjcActuator "l_wrist_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_wrist_roll>
+        }
+
+        def MjcActuator "l_wrist_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_wrist_pitch>
+        }
+
+        def MjcActuator "l_1_dof_gripper_moving_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/l_1_dof_gripper_moving>
+        }
+
+        def MjcActuator "r_shoulder_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_shoulder_pitch>
+        }
+
+        def MjcActuator "r_shoulder_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_shoulder_roll>
+        }
+
+        def MjcActuator "r_shoulder_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_shoulder_yaw>
+        }
+
+        def MjcActuator "r_elbow_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_elbow_pitch>
+        }
+
+        def MjcActuator "r_wrist_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_wrist_yaw>
+        }
+
+        def MjcActuator "r_wrist_roll_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_wrist_roll>
+        }
+
+        def MjcActuator "r_wrist_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_wrist_pitch>
+        }
+
+        def MjcActuator "r_1_dof_gripper_moving_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/r_1_dof_gripper_moving>
+        }
+
+        def MjcActuator "neck_yaw_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/neck_yaw>
+        }
+
+        def MjcActuator "neck_pitch_actuator"
+        {
+            uniform double mjc:forceRange:max = 1000
+            uniform double mjc:forceRange:min = -1000
+            custom rel mjc:target
+            prepend rel mjc:target = </igris_c_v2/Physics/neck_pitch>
+        }
+
+        over "base_joint"
+        {
+        }
+
+        over "waist_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "waist_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "waist_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_hip_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_hip_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_hip_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_knee_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_ankle_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_ankle_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_hip_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_hip_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_hip_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_knee_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_ankle_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_ankle_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_shoulder_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_shoulder_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_shoulder_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_elbow_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_wrist_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_wrist_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_wrist_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "l_1_dof_gripper_fixed"
+        {
+        }
+
+        over "l_1_dof_gripper_moving" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_shoulder_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_shoulder_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_shoulder_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_elbow_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_wrist_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_wrist_roll" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_wrist_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "r_1_dof_gripper_fixed"
+        {
+        }
+
+        over "r_1_dof_gripper_moving" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "neck_yaw" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "neck_pitch" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_link"
+        {
+            over "pelvis"
+            {
+                over "waist_follower"
+                {
+                    over "waist_frame"
+                    {
+                        over "torso"
+                        {
+                            over "l_shoulder_frame"
+                            {
+                                over "l_shoulder_bracket"
+                                {
+                                    over "l_upper_arm"
+                                    {
+                                        over "l_elbow_bracket"
+                                        {
+                                            over "l_forearm"
+                                            {
+                                                over "l_wrist_rod"
+                                                {
+                                                    over "l_wrist_connector"
+                                                    {
+                                                        over "l_1_dof_gripper_fixed"
+                                                        {
+                                                            over "l_1_dof_gripper_moving"
+                                                            {
+                                                                over "l_1_dof_gripper_moving"
+                                                                {
+                                                                }
+
+                                                                over "l_1_dof_gripper_moving_1"
+                                                                {
+                                                                }
+                                                            }
+
+                                                            over "l_1_dof_gripper_fixed"
+                                                            {
+                                                            }
+
+                                                            over "l_1_dof_gripper_fixed_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "l_wrist_connector"
+                                                        {
+                                                        }
+
+                                                        over "l_wrist_connector_1"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "l_wrist_rod"
+                                                    {
+                                                    }
+
+                                                    over "l_wrist_rod_1"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "l_forearm"
+                                                {
+                                                }
+
+                                                over "l_forearm_1"
+                                                {
+                                                }
+                                            }
+
+                                            over "l_elbow_bracket"
+                                            {
+                                            }
+
+                                            over "l_elbow_bracket_1"
+                                            {
+                                            }
+                                        }
+
+                                        over "l_upper_arm"
+                                        {
+                                        }
+
+                                        over "l_upper_arm_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "l_shoulder_bracket"
+                                    {
+                                    }
+
+                                    over "l_shoulder_bracket_1"
+                                    {
+                                    }
+                                }
+
+                                over "l_shoulder_frame"
+                                {
+                                }
+
+                                over "l_shoulder_frame_1"
+                                {
+                                }
+                            }
+
+                            over "r_shoulder_frame"
+                            {
+                                over "r_shoulder_bracket"
+                                {
+                                    over "r_upper_arm"
+                                    {
+                                        over "r_elbow_bracket"
+                                        {
+                                            over "r_forearm"
+                                            {
+                                                over "r_wrist_rod"
+                                                {
+                                                    over "r_wrist_connector"
+                                                    {
+                                                        over "r_1_dof_gripper_fixed"
+                                                        {
+                                                            over "r_1_dof_gripper_moving"
+                                                            {
+                                                                over "r_1_dof_gripper_moving"
+                                                                {
+                                                                }
+
+                                                                over "r_1_dof_gripper_moving_1"
+                                                                {
+                                                                }
+                                                            }
+
+                                                            over "r_1_dof_gripper_fixed"
+                                                            {
+                                                            }
+
+                                                            over "r_1_dof_gripper_fixed_1"
+                                                            {
+                                                            }
+                                                        }
+
+                                                        over "r_wrist_connector"
+                                                        {
+                                                        }
+
+                                                        over "r_wrist_connector_1"
+                                                        {
+                                                        }
+                                                    }
+
+                                                    over "r_wrist_rod"
+                                                    {
+                                                    }
+
+                                                    over "r_wrist_rod_1"
+                                                    {
+                                                    }
+                                                }
+
+                                                over "r_forearm"
+                                                {
+                                                }
+
+                                                over "r_forearm_1"
+                                                {
+                                                }
+                                            }
+
+                                            over "r_elbow_bracket"
+                                            {
+                                            }
+
+                                            over "r_elbow_bracket_1"
+                                            {
+                                            }
+                                        }
+
+                                        over "r_upper_arm"
+                                        {
+                                        }
+
+                                        over "r_upper_arm_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "r_shoulder_bracket"
+                                    {
+                                    }
+
+                                    over "r_shoulder_bracket_1"
+                                    {
+                                    }
+                                }
+
+                                over "r_shoulder_frame"
+                                {
+                                }
+
+                                over "r_shoulder_frame_1"
+                                {
+                                }
+                            }
+
+                            over "neck"
+                            {
+                                over "head"
+                                {
+                                    over "head"
+                                    {
+                                    }
+
+                                    over "head_1"
+                                    {
+                                    }
+                                }
+
+                                over "neck"
+                                {
+                                }
+
+                                over "neck_1"
+                                {
+                                }
+                            }
+
+                            over "torso"
+                            {
+                            }
+
+                            over "torso_1"
+                            {
+                            }
+                        }
+
+                        over "waist_frame"
+                        {
+                        }
+
+                        over "waist_frame_1"
+                        {
+                        }
+                    }
+
+                    over "waist_follower"
+                    {
+                    }
+
+                    over "waist_follower_1"
+                    {
+                    }
+                }
+
+                over "l_hip_frame"
+                {
+                    over "l_hip_bracket"
+                    {
+                        over "l_upper_leg"
+                        {
+                            over "l_lower_leg"
+                            {
+                                over "l_ankle_frame"
+                                {
+                                    over "l_foot_original"
+                                    {
+                                        over "l_foot_original"
+                                        {
+                                        }
+
+                                        over "l_foot_original_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "l_ankle_frame"
+                                    {
+                                    }
+
+                                    over "l_ankle_frame_1"
+                                    {
+                                    }
+                                }
+
+                                over "l_lower_leg"
+                                {
+                                }
+
+                                over "l_lower_leg_1"
+                                {
+                                }
+                            }
+
+                            over "l_upper_leg"
+                            {
+                            }
+
+                            over "l_upper_leg_1"
+                            {
+                            }
+                        }
+
+                        over "l_hip_bracket"
+                        {
+                        }
+
+                        over "l_hip_bracket_1"
+                        {
+                        }
+                    }
+
+                    over "l_hip_frame"
+                    {
+                    }
+
+                    over "l_hip_frame_1"
+                    {
+                    }
+                }
+
+                over "r_hip_frame"
+                {
+                    over "r_hip_bracket"
+                    {
+                        over "r_upper_leg"
+                        {
+                            over "r_lower_leg"
+                            {
+                                over "r_ankle_frame"
+                                {
+                                    over "r_foot_original"
+                                    {
+                                        over "r_foot_original"
+                                        {
+                                        }
+
+                                        over "r_foot_original_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "r_ankle_frame"
+                                    {
+                                    }
+
+                                    over "r_ankle_frame_1"
+                                    {
+                                    }
+                                }
+
+                                over "r_lower_leg"
+                                {
+                                }
+
+                                over "r_lower_leg_1"
+                                {
+                                }
+                            }
+
+                            over "r_upper_leg"
+                            {
+                            }
+
+                            over "r_upper_leg_1"
+                            {
+                            }
+                        }
+
+                        over "r_hip_bracket"
+                        {
+                        }
+
+                        over "r_hip_bracket_1"
+                        {
+                        }
+                    }
+
+                    over "r_hip_frame"
+                    {
+                    }
+
+                    over "r_hip_frame_1"
+                    {
+                    }
+                }
+
+                over "pelvis"
+                {
+                }
+
+                over "pelvis_upper_front"
+                {
+                }
+
+                over "pelvis_upper_back"
+                {
+                }
+
+                over "pelvis_lower"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

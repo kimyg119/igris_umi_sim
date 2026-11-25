@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Error code definitions for robot status reporting",
+  "motor_error_bitmask": {
+    "1": "Initialize error",
+    "2": "Packet not received",
+    "4": "Motor stall",
+    "8": "Low voltage",
+    "16": "Over voltage",
+    "32": "Over current",
+    "64": "Power overrun",
+    "128": "Calibration parameter writing error",
+    "256": "Speeding",
+    "512": "Component overtemperature",
+    "1024": "Motor overtemperature",
+    "2048": "Encoder calibration error",
+    "4096": "Encoder data error",
+    "8192": "Motor brake voltage too high",
+    "16384": "DRV drive error"
+  },
+  "error_categories": {
+    "ESTOP": {
+      "code": 3000,
+      "message": "Emergency stop is active"
+    },
+    "IMU": {
+      "code": 2000,
+      "flags": {
+        "data_valid": "IMU data invalid",
+        "acc_valid": "IMU accelerometer invalid",
+        "gyro_valid": "IMU gyroscope invalid",
+        "rpy_valid": "IMU RPY invalid",
+        "quat_valid": "IMU quaternion invalid"
+      }
+    },
+    "MOTOR": {
+      "code": 4000
+    }
+  }
+}

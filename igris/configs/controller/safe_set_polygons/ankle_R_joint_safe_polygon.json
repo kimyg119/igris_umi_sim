@@ -1,0 +1,45 @@
+{
+  "csv_path": "data/ankle_R_20260119_150448.csv",
+  "selected_pair": {
+    "x": "pitch",
+    "y": "roll",
+    "pair_index": 0
+  },
+  "vertices": [
+    [
+      -0.7,
+      0.0
+    ],
+    [
+      -0.3222,
+      -0.3765
+    ],
+    [
+      0.323,
+      -0.3729
+    ],
+    [
+      0.6343,
+      -0.054
+    ],
+    [
+      0.2589,
+      0.3461
+    ],
+    [
+      -0.3813,
+      0.3307
+    ]
+  ],
+  "polygon_area_signed": 0.7034921700000001,
+  "polygon_area_abs": 0.7034921700000001,
+  "margin_ratio_0_1": 0.0,
+  "margin_reference": "d_max (max interior distance to boundary, grid-estimated)",
+  "d_max_estimate": 0.35707782601122834,
+  "margin_dist": 0.0,
+  "margined_vertices_same_count": null,
+  "margined_area_abs_same_count": 0.0,
+  "margined_area_grid_estimate": 0.0,
+  "margined_area_note": "same_count inset is robust-approx; grid area is an independent estimate.",
+  "policy": "strict interior; inside_margined = inside_original AND dist_to_boundary > margin_dist"
+}

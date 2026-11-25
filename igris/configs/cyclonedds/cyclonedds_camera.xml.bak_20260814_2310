@@ -1,0 +1,9 @@
+<CycloneDDS>
+    <Domain>
+        <General>
+            <Interfaces>
+                <NetworkInterface name="enp87s0" autodetermine="false" />
+            </Interfaces>
+        </General>
+    </Domain>
+</CycloneDDS>

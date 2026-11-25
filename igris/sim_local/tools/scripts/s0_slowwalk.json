@@ -1,0 +1,5 @@
+[
+  {"t": 0, "mode": 0},
+  {"t": 10, "mode": 1, "speed": 0.3, "move": [1, 0], "face": [1, 0]},
+  {"t": 70, "mode": 0, "speed": null, "move": [0, 0]}
+]
