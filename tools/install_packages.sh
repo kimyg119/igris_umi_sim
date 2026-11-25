@@ -7,9 +7,11 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PY=${1:-python3}
-IK="mink==1.3.0 mujoco==3.11.0 qpsolvers==4.13.0 daqp==0.11.2"
-$PY -m pip install --quiet --target vendor_py/mink_cp312 $IK scipy==1.13.1
-$PY -m pip install --quiet --target vendor_py/mink_host $IK
+# Without their dependencies: numpy has to stay the one of the simulator image (1.26, ROS is built against it) and of
+# the host environment, and MuJoCo's viewer packages are not needed.
+IK="mink==1.3.0 mujoco==3.11.0 qpsolvers==4.13.0 daqp==0.11.2 typing_extensions"
+$PY -m pip install --quiet --no-deps --target vendor_py/mink_cp312 $IK scipy==1.13.1
+$PY -m pip install --quiet --no-deps --target vendor_py/mink_host $IK
 # numpy, scipy and torch come from the environment that runs the GPU side (they must match its CUDA and its
 # compiled packages): whatever pip pulled in of them is taken out again.
 $PY -m pip install --quiet --target vendor_py/train_host pyopengl draccus 'huggingface_hub>=1.6,<2' gymnasium termcolor \
